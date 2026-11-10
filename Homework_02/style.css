@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+
+#header {
+    background-color: #1a426e;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#header h1 {
+    margin: 0 0 15px 0;
+    font-size: 28px;
+}
+
+#header p {
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+#menu {
+    background-color: #3b75b4;
+    padding: 20px;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#menu li {
+    margin-bottom: 8px;
+}
+
+#menu li:last-child {
+    margin-bottom: 0;
+}
+
+#menu a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+#main-content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+#about, #courses, #course-details, #teachers, #resources, #contacts {
+    background-color: #ffffff;
+    border: 1px solid #dce1e7;
+    border-radius: 4px;
+    padding: 25px;
+    margin-bottom: 35px;
+}
+
+
+#main-content h2 {
+    color: #1a426e;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3b75b4;
+}
+
+
+#main-content ul, #main-content ol {
+    padding-left: 20px;
+}
+
+#main-content li {
+    margin-bottom: 8px;
+}
+
+
+.course-card, .teacher-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.course-card:last-child, .teacher-card:last-child {
+    margin-bottom: 0;
+}
+
+
+.course-card h3, .teacher-card h3 {
+    color: #2d3748;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+/* Горизонтальна flex-компоновка картки викладача: аватар + текстовий блок */
+.teacher-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.teacher-card .teacher-avatar {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.teacher-card .teacher-info {
+    flex: 1;
+}
+
+.teacher-card .teacher-info h3 {
+    margin-top: 0;
+}
+
+.teacher-card .teacher-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: #3b75b4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    background-color: #1a426e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+#footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
