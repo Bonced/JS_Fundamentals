@@ -1,6 +1,6 @@
 // 
 const map = L.map("map", {
-    scrollWheelZoom: false   // колесо мыши не мешает прокручивать страницу
+    scrollWheelZoom: false   
 }).setView([48.4647, 35.0462], 14);
 
 // 
