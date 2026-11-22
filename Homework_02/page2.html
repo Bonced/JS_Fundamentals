@@ -2,156 +2,297 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Навчальний центр</title>
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    
-    <div id="header">
-        <h1>Навчальний центр</h1>
-        <p>Навчальний центр пропонує курси за сучасними напрямами IT: програмування, тестування програмного забезпечення, основи інформаційних технологій та англійська мова для IT.</p>
+    <!-- 1. верхня смужка -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-contacts">
+                <span>info@study-center.example</span>
+                <span>+38 (099) 123-45-67</span>
+                <span>м. Дніпро, вул. Освітня, 10</span>
+            </div>
+            <div class="topbar-social">
+                <a href="#" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
     </div>
 
-    
-    <div id="menu">
-        <ul>
-            <li><a href="#about">Про центр</a></li>
-            <li><a href="#courses">Курси</a></li>
-            <li><a href="#teachers">Викладачі</a></li>
-            <li><a href="#resources">Корисні ресурси</a></li>
-            <li><a href="#contacts">Контакти</a></li>
-        </ul>
-    </div>
+    <!-- 2. шапка з меню -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#header" class="logo">
+                <img src="img/logo.png" alt="Логотип" class="logo-img">
+                <span>Навчальний центр</span>
+            </a>
 
-    
-    <div id="main-content">
+            <nav id="menu">
+                <ul>
+                    <li><a href="#about">Про центр</a></li>
+                    <li><a href="#courses">Курси</a></li>
+                    <li><a href="#teachers">Викладачі</a></li>
+                    <li><a href="#resources">Корисні ресурси</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </nav>
 
-        
-        <div id="about">
-            <h2>Про центр</h2>
-            <p>Навчальний центр здійснює підготовку слухачів, які хочуть розпочати навчання у сфері інформаційних технологій або систематизувати вже наявні знання.</p>
-            <p>Програми навчання поєднують теоретичний матеріал, практичні завдання та роботу над навчальними проєктами. Особлива увага приділяється формуванню практичних навичок, необхідних для подальшого професійного розвитку в IT.</p>
-            <p>Додаткову інформацію про сучасні вебтехнології можна знайти на сайті <a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a>.</p>
-            
-            
+            <a href="#contacts" class="btn btn-primary">Записатися</a>
         </div>
+    </header>
 
-        
-        <div id="courses">
-            <h2>Курси</h2>
-            <p>У навчальному центрі доступні такі напрями підготовки:</p>
-            <ul>
-                <li>Програмування .NET</li>
-                <li>IT Fundamentals</li>
-                <li>QA</li>
-                <li>Англійська мова для IT</li>
-            </ul>
-            
-            <p>Навчання складається з кількох основних етапів:</p>
-            <ol>
-                <li>Ознайомлення з програмою курсу</li>
-                <li>Вивчення теоретичного матеріалу</li>
-                <li>Виконання практичних завдань</li>
-                <li>Робота над навчальним проєктом</li>
-                <li>Підсумкове заняття та аналіз результатів</li>
-            </ol>
-        </div>
-
-        
-        <div id="course-details">
-            <h2>Опис напрямів</h2>
-
-            <div class="course-card">
-                <h3>Програмування .NET</h3>
-                <p>Курс спрямований на вивчення основ програмування мовою C#, принципів об'єктно-орієнтованого програмування та створення застосунків на платформі .NET</p>
-            </div>
-
-            <div class="course-card">
-                <h3>IT Fundamentals</h3>
-                <p>Курс знайомить слухачів з базовими поняттями інформаційних технологій, роботою комп'ютерних систем, мережами, вебтехнологіями та основами програмування.</p>
-            </div>
-
-            <div class="course-card">
-                <h3>QA</h3>
-                <p>Напрям присвячений основам тестування програмного забезпечення видам тестування, роботі з тестовою документацією та пошуку помилок у програмних продуктах.</p>
-            </div>
-
-            <div class="course-card">
-                <h3>Англійська мова для IT</h3>
-                <p>Курс допомагає опанувати професійну лексику, необхідну для роботи з технічною документацією, спілкування в команді та участі в міжнародних IT-проєктах</p>
-            </div>
-        </div>
-
-        
-        <div id="teachers">
-            <h2>Викладачі</h2>
-            
-            <div class="teacher-card">
-                <img src="images/teacher-kovalenko.jpg" alt="Олена Коваленко" class="teacher-avatar">
-                <div class="teacher-info">
-                    <h3>Олена Коваленко</h3>
-                    <p><strong>Напрям:</strong> Програмування .NET</p>
-                    <p>Викладає основи C#, об'єктно-орієнтоване програмування та створення застосунків на платформі .NET</p>
-                </div>
-            </div>
-
-            <div class="teacher-card">
-                <img src="images/teacher-melnyk.jpg" alt="Андрій Мельник" class="teacher-avatar">
-                <div class="teacher-info">
-                    <h3>Андрій Мельник</h3>
-                    <p><strong>Напрям:</strong> IT Fundamentals</p>
-                    <p>Пояснює базові поняття інформаційних технологій, веброзробки, комп'ютерних мереж та програмування</p>
-                </div>
-            </div>
-
-            <div class="teacher-card">
-                <img src="images/teacher-shevchenko.jpg" alt="Марина Шевченко" class="teacher-avatar">
-                <div class="teacher-info">
-                    <h3>Марина Шевченко</h3>
-                    <p><strong>Напрям:</strong> QA</p>
-                    <p>Навчає основам тестування програмного забезпечення, аналізу вимог та створенню тестової документації.</p>
-                </div>
-            </div>
-
-            <div class="teacher-card">
-                <img src="images/teacher-bondar.jpg" alt="Ірина Бондар" class="teacher-avatar">
-                <div class="teacher-info">
-                    <h3>Ірина Бондар</h3>
-                    <p><strong>Напрям:</strong> Англійська мова для IT</p>
-                    <p>Допомагає слухачам опанувати технічну лексику та навички професійної комунікації англійською мовою.</p>
+    <!-- 3. hero -->
+    <section id="header" class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Навчальний центр<br>для майбутніх IT-фахівців</h1>
+                <p>Сучасні програми навчання, практичні завдання та досвідчені викладачі допоможуть вам опанувати актуальні IT-професії.</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Переглянути курси</a>
+                    <a href="#about" class="btn btn-outline">Дізнатися більше</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        
-        <div id="resources">
-            <h2>Корисні ресурси</h2>
-            <p>Для самостійного навчання можна використовувати такі ресурси:</p>
-            <ul>
-                <li><a href="https://learn.microsoft.com/" target="_blank">Microsoft Learn</a></li>
-                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
-                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
-            </ul>
+    <!-- 4. про центр -->
+    <section id="about" class="section">
+        <div class="container about-inner">
+            <div class="about-image">
+                <img src="img/about.png" alt="Навчання в IT">
+            </div>
+            <div class="about-text">
+                <h2>Про центр</h2>
+                <p>Навчальний центр здійснює підготовку слухачів, які хочуть розпочати навчання у сфері інформаційних технологій або систематизувати вже наявні знання.</p>
+                <p>Програми навчання поєднують теоретичний матеріал, практичні завдання та роботу над навчальними проєктами. Особлива увага приділяється формуванню практичних навичок, необхідних для подальшого професійного розвитку в IT.</p>
+                <a href="#courses" class="btn btn-outline">Дізнатися про центр</a>
+            </div>
         </div>
+    </section>
 
-        
-        <div id="contacts">
-            <h2>Контакти</h2>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:info@study-center.example">info@study-center.example</a></li>
-                <li><strong>Телефон:</strong> <a href="tel:+380991234567">+38 (099) 123-45-67</a></li>
-                <li><strong>Адреса:</strong> м. Дніпро, вул. Освітня, 10</li>
-            </ul>
+    <!-- 5. курси -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="section-title">Наші курси</h2>
+
+            <div class="courses-grid">
+                <div class="course-card">
+                    <img src="img/icon-net.png" alt="" class="course-icon">
+                    <h3>Програмування .NET</h3>
+                    <p>Основи програмування мовою C#, принципи об'єктно-орієнтованого програмування та створення застосунків на платформі .NET.</p>
+                    <a href="#contacts" class="card-link">Детальніше →</a>
+                </div>
+
+                <div class="course-card">
+                    <img src="img/icon-it.png" alt="" class="course-icon">
+                    <h3>IT Fundamentals</h3>
+                    <p>Основи інформаційних технологій, веброзробки, комп'ютерних мереж та програмування.</p>
+                    <a href="#contacts" class="card-link">Детальніше →</a>
+                </div>
+
+                <div class="course-card">
+                    <img src="img/icon-qa.png" alt="" class="course-icon">
+                    <h3>QA</h3>
+                    <p>Основи тестування програмного забезпечення, види тестування та робота з документацією.</p>
+                    <a href="#contacts" class="card-link">Детальніше →</a>
+                </div>
+
+                <div class="course-card">
+                    <img src="img/icon-english.png" alt="" class="course-icon">
+                    <h3>Англійська мова для IT</h3>
+                    <p>Професійна лексика, технічна документація та спілкування в IT-середовищі.</p>
+                    <a href="#contacts" class="card-link">Детальніше →</a>
+                </div>
+            </div>
+
+            <!-- смуга переваг -->
+            <div class="features">
+                <div class="feature">
+                    <img src="img/feature-1.png" alt="" class="feature-icon">
+                    <h4>Сучасні програми</h4>
+                    <p>Актуальні знання та навички, що відповідають вимогам IT-індустрії.</p>
+                </div>
+                <div class="feature">
+                    <img src="img/feature-2.png" alt="" class="feature-icon">
+                    <h4>Практичний підхід</h4>
+                    <p>Більше практики, проєктів та реальних завдань.</p>
+                </div>
+                <div class="feature">
+                    <img src="img/feature-3.png" alt="" class="feature-icon">
+                    <h4>Досвідчені викладачі</h4>
+                    <p>Професіонали з реальним досвідом роботи в IT.</p>
+                </div>
+                <div class="feature">
+                    <img src="img/feature-4.png" alt="" class="feature-icon">
+                    <h4>Сертифікат</h4>
+                    <p>Після завершення курсу ви отримаєте сертифікат.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-    </div> 
+    <!-- 6. викладачі -->
+    <section id="teachers" class="section">
+        <div class="container">
+            <h2 class="section-title">Наші викладачі</h2>
 
-    
-    <div id="footer">
-        <p>&copy; 2026 Навчальний центр. Усі права захищено.</p>
-        <p><a href="#header">Повернутися нагору</a></p>
-    </div>
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <img src="img/teacher-kovalenko.jpg" alt="Олена Коваленко" class="teacher-avatar">
+                    <div class="teacher-info">
+                        <h3>Олена Коваленко</h3>
+                        <p class="teacher-course">Програмування .NET</p>
+                        <p>Викладає основи C#, ООП та створення застосунків на платформі .NET.</p>
+                        <div class="teacher-social">
+                            <a href="#">in</a>
+                            <a href="#">f</a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="teacher-card">
+                    <img src="img/teacher-melnyk.jpg" alt="Андрій Мельник" class="teacher-avatar">
+                    <div class="teacher-info">
+                        <h3>Андрій Мельник</h3>
+                        <p class="teacher-course">IT Fundamentals</p>
+                        <p>Пояснює базові поняття IT, веброзробки, комп'ютерних мереж та програмування.</p>
+                        <div class="teacher-social">
+                            <a href="#">in</a>
+                            <a href="#">f</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/teacher-shevchenko.jpg" alt="Марина Шевченко" class="teacher-avatar">
+                    <div class="teacher-info">
+                        <h3>Марина Шевченко</h3>
+                        <p class="teacher-course">QA</p>
+                        <p>Навчає основам тестування ПЗ, аналізу вимог та створенню тестової документації.</p>
+                        <div class="teacher-social">
+                            <a href="#">in</a>
+                            <a href="#">f</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="img/teacher-bondar.jpg" alt="Ірина Бондар" class="teacher-avatar">
+                    <div class="teacher-info">
+                        <h3>Ірина Бондар</h3>
+                        <p class="teacher-course">Англійська мова для IT</p>
+                        <p>Допомагає опанувати технічну лексику та навички професійної комунікації.</p>
+                        <div class="teacher-social">
+                            <a href="#">in</a>
+                            <a href="#">f</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. ресурси + контакти -->
+    <section class="section">
+        <div class="container bottom-grid">
+
+            <div id="resources" class="resources">
+                <div class="resources-list">
+                    <h2>Корисні ресурси</h2>
+                    <ul>
+                        <li><a href="https://learn.microsoft.com/" target="_blank">Microsoft Learn <span>↗</span></a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs <span>↗</span></a></li>
+                        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools <span>↗</span></a></li>
+                        <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp <span>↗</span></a></li>
+                        <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow <span>↗</span></a></li>
+                    </ul>
+                </div>
+                <img src="img/1hero.jpg" alt="" class="resources-img">
+            </div>
+
+            <div id="contacts" class="contacts">
+                <div class="contacts-info">
+                    <h2>Контакти</h2>
+                    <ul>
+                        <li><span class="ci">✉</span> <a href="mailto:info@study-center.example">info@study-center.example</a></li>
+                        <li><span class="ci">☎</span> <a href="tel:+380991234567">+38 (099) 123-45-67</a></li>
+                        <li><span class="ci">⌖</span> м. Дніпро, вул. Освітня, 10</li>
+                        <li><span class="ci">◷</span> Пн – Пт: 09:00 – 18:00</li>
+                    </ul>
+                </div>
+                <div id="map" class="contacts-map"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. футер -->
+    <footer id="footer">
+        <div class="container footer-grid">
+
+            <div class="footer-col">
+                <a href="#header" class="logo logo-light">
+                    <img src="img/logo.png" alt="Логотип" class="logo-img">
+                    <span>Навчальний центр</span>
+                </a>
+                <p>&copy; 2026 Навчальний центр.<br>Усі права захищено.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Навігація</h4>
+                <ul>
+                    <li><a href="#about">Про центр</a></li>
+                    <li><a href="#courses">Курси</a></li>
+                    <li><a href="#teachers">Викладачі</a></li>
+                    <li><a href="#resources">Корисні ресурси</a></li>
+                    <li><a href="#contacts">Контакти</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Підпишіться на новини</h4>
+                <p>Діліться новинами про нові курси та події.</p>
+                <form class="subscribe" action="#">
+                    <input type="email" placeholder="Ваш email">
+                    <button type="submit" class="btn btn-primary">Підписатися</button>
+                </form>
+            </div>
+
+            <div class="footer-col">
+                <h4>Ми в соцмережах</h4>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                    </a>
+                </div>
+                <a href="#header" class="to-top">↑ Повернутися нагору</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
